@@ -21,35 +21,26 @@
 5. Goal: Sell as many Items as you can
 6. Things to keep track of:
 	a) Suply and Demand (pens/paper)
-		The suply and demand starts at 1/1
+		The suply and demand starts at 1/5
         if you by one pen the suply for pens goes down but the suply for paper goes up 0/2
         if you then sell those 2 paper the suply for pens goes up again 2/0
     b) Price
-    	The Price Starts at 1€ per Item
+    	The Price Starts at 0,30€ per Item
         The Demand for Free Items is at 100% -> If someone wants a Item he will buy it
-        If The Price is at 10€ per Item the Demand is at 0% -> No one buys it
+        If The Price is at 1€ per Item the Demand is at 0% -> No one buys it
         You can Change the Price but higher price = lower demand
-        Demande (in %) = 100 - Price * 10
+        Demande (in %) = (1 - Price) * 100
     c) Production Cost
     	The Production Cost starts at 0,10€
+        Lower Production Cost = higher chance for an nonfunctional item
+        If an product is nonfunctional you can't sell it=
 '''
 import os
-import tkinter as tk
-import time
 
 class idle_game():
-    
     def run():
-        global money
-        global kps
-        # Create a window
-        root = tk.Tk()
-        root.title('nairams idle game') # Window Titel
-        root.geometry('600x400+50+50') # Window mesurements
-        root.resizable(False, False)
-        root.mainloop()    
-        # Update your kps and amount count via a file
-        # Let the Player
+        global money, kps
+		idle_game.read_data()
             # Buy, Sell Addons (like fabrics, workers...)
         # Update your amount every second
         # When closed
@@ -65,8 +56,7 @@ class idle_game():
         kps = int(kps_open_file.read())
 
     def save_data():
-        global money
-        global kps
+        global money, kps
         # Open file
         money_open_file = open('money.txt', 'w')
         kps_open_file = open('kps.txt', 'w')
