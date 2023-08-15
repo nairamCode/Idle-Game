@@ -11,6 +11,28 @@
 '''
 # When closed
     # Store kps and amount count in a file
+    
+# GAME IDEA #
+'''
+1. Idle Game where you produce and sell goods
+2. Sell Item: Pen, Paper
+3. Produce One Item by pressing a button
+4. Sell one Item by pressing a button
+5. Goal: Sell as many Items as you can
+6. Things to keep track of:
+	a) Suply and Demand (pens/paper)
+		The suply and demand starts at 1/1
+        if you by one pen the suply for pens goes down but the suply for paper goes up 0/2
+        if you then sell those 2 paper the suply for pens goes up again 2/0
+    b) Price
+    	The Price Starts at 1€ per Item
+        The Demand for Free Items is at 100% -> If someone wants a Item he will buy it
+        If The Price is at 10€ per Item the Demand is at 0% -> No one buys it
+        You can Change the Price but higher price = lower demand
+        Demande (in %) = 100 - Price * 10
+    c) Production Cost
+    	The Production Cost starts at 0,10€
+'''
 import os
 import tkinter as tk
 import time
