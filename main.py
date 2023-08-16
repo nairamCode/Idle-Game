@@ -31,9 +31,14 @@
         You can Change the Price but higher price = lower demand
         Demande (in %) = (1 - Price) * 100
     c) Production Cost
-    	The Production Cost starts at 0,10€
+    	The Production Cost starts at 0,30€
         Lower Production Cost = higher chance for an nonfunctional item
-        If an product is nonfunctional you can't sell it=
+        If an product is nonfunctional you can't sell it
+        Failure Chance = -1.225 * Production Price + 1.1125
+	d) Storage
+    	Your Storage starts at 1000
+        higher Item Amount = lower cost per Product
+        
 '''
 import os
 
