@@ -41,16 +41,9 @@
         
 '''
 import os
+import time
 
 class idle_game():
-    def run():
-        global money, kps
-		idle_game.read_data()
-            # Buy, Sell Addons (like fabrics, workers...)
-        # Update your amount every second
-        # When closed
-            # Store kps and amount count in a file
-
     def read_data():
         global money, kps
         # Open file
@@ -68,5 +61,20 @@ class idle_game():
         # overwrite amounts from the variables
         money_open_file.write(str(money))
         kps_open_file.write(str(kps))
-
+    
+    def run():
+        global money, kps
+        idle_game.read_data()
+            # Buy, Sell Addons (like fabrics, workers...)
+        # Update your amount every second
+        # When closed
+            # Store kps and amount count in a file
 idle_game.run()
+
+# Testing how to implement a tick system every second
+'''
+after one second:
+    print data
+    save data
+    add data
+'''
